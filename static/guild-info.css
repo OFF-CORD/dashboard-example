@@ -1,0 +1,62 @@
+@import url("./common.css");
+
+h1,
+h2 {
+    text-align: center;
+}
+
+button {
+    background-color: var(--page-foreground);
+    border-radius: 100rem;
+    padding: 0.5rem 1rem;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: bolder;
+    color: var(--page-background);
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+
+    border: unset;
+}
+
+
+.guild-roles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    justify-items: center;
+
+    max-height: 80rem;
+}
+
+.guild-role {
+    color: var(--page-foreground);
+    background-color: var(--page-background);
+    border: 1px solid var(--page-foreground);
+    border-radius: 0.4rem;
+    padding: 0.2rem 0.2rem;
+    margin: 1rem;
+
+    min-width: 12rem;
+
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.guild-role .dot {
+    display: inline;
+    border-radius: 100rem;
+    padding: 1rem;
+    max-height: 0rem;
+    max-width: 0rem;
+}

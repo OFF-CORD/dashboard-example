@@ -1,0 +1,56 @@
+@import url("./common.css");
+
+
+.guilds-picker {
+    text-align: center;
+}
+
+.guild-cards {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: row wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+
+    justify-items: center;
+}
+
+.guild-card {
+    border: 4px solid;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    max-width: 8rem;
+
+    margin: 0.5rem;
+    display: grid;
+    grid-template-rows: 1fr 0.2fr;
+    justify-items: center;
+}
+
+.guild-card.green-border {
+    border-color: rgb(159, 255, 90);
+}
+
+.guild-card.red-border {
+    border-color: rgb(255, 90, 90);
+}
+
+.guild-card:hover {
+    box-shadow: white 0px 0.35em 1.175em,
+        white 0px 0.175em 0.5em;
+    transform: scale(1.1);
+}
+
+img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.default-image {
+    content: url("https://cdn.discordapp.com/embed/avatars/4.png");
+}

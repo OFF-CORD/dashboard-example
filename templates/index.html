@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='index.css')}}"
+      media="all"
+    />
+
+    <title>Home Page</title>
+  </head>
+  <body>
+    <h1>Welcome to {{ bot_name }}'s Dashboard!</h1>
+    <p align="center">
+      {% if not authorized %}
+      <a href="/login"><button>Login with discord</button></a>
+      {% else %}
+      <a href="/dashboard"><button>Open Dashboard</button></a>
+      {%endif %}
+    </p>
+  </body>
+</html>

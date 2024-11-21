@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dashboard.css')}}"
+      media="all"
+    />
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Bot Dashboard Demo</h1>
+
+    <h2>The Bot is in: {{ guild_count }} servers</h2>
+
+    <div class="guilds-picker">
+      <h3>Hello, {{ username }}! Please select a server to get started</h3>
+      <hr />
+      <section class="guild-cards">
+        {% for guild in guilds %}
+
+        <div class="guild-card {{ guild.class_color }}">
+          <a href="/dashboard/{{ guild.id }}">
+
+            {% if guild.icon_url %}
+                <img src="{{ guild.icon_url }}" alt="{{ guild.name }} icon" />
+            {% else %}
+                <img class="default-image" alt="Default server icon" />
+            {% endif %}
+
+            <br />
+            {{ guild.name }}
+          </a>
+        </div>
+
+        {% endfor %}
+      </section>
+    </div>
+  </body>
+</html>

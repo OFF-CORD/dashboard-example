@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='guild-info.css')}}"
+      media="all"
+    />
+
+    <title>Info for {{ guild.name }}</title>
+  </head>
+  <body>
+    <h1>Showing Info for {{ guild.name }}</h1>
+
+    <h2>Members Count: {{ guild.member_count }}</h2>
+    
+    <h2>Roles List</h2>
+    <div class="guild-roles">
+      {% for role in guild_roles %}
+      <div class="guild-role">
+        <div class="dot" style="background-color: {{ role.color }};"></div>
+        {{ role.name }}
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

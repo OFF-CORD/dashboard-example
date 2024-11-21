@@ -1,0 +1,6 @@
+loguru
+py-cord
+flask[async]
+flask-discord
+hypercorn
+python-dotenv
